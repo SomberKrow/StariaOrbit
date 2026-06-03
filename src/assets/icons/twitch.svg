@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Twitch icon">
+  <path fill="#fff" d="M16 10h38v28L43 49H32l-7 7h-8v-7H8V20l8-10z"/>
+  <path fill="#5d47d6" d="M19 16v28h10v6l6-6h10l6-6V16H19z"/>
+  <path fill="#fff" d="M36 24h5v13h-5zM46 24h5v13h-5z" transform="translate(-6)"/>
+</svg>

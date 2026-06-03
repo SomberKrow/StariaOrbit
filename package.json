@@ -1,0 +1,24 @@
+{
+  "name": "staria-first-orbit-alpha",
+  "version": "1.0.0-alpha.0",
+  "private": true,
+  "type": "module",
+  "description": "First Orbit Alpha \u2014 a clean Vue 3 cosmic social hub for Staria VT.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.vue --ignore-pattern dist"
+  },
+  "dependencies": {
+    "vue": "^3.5.14"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "eslint-plugin-vue": "^10.1.0",
+    "sass": "^1.88.0",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "vite": "^6.3.5"
+  }
+}

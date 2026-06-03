@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Staria VT social preview">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="72%">
+      <stop offset="0%" stop-color="#2d255f"/>
+      <stop offset="48%" stop-color="#111536"/>
+      <stop offset="100%" stop-color="#060813"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="45%" r="58%">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="36%" stop-color="#e9dcff"/>
+      <stop offset="72%" stop-color="#9e83ff"/>
+      <stop offset="100%" stop-color="#4f3db5"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="180" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="600" cy="315" r="270" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"/>
+  <circle cx="600" cy="315" r="94" fill="url(#core)" filter="url(#glow)"/>
+  <path d="M600 180l22 82 82 22-82 22-22 82-22-82-82-22 82-22 22-82z" fill="#fff" opacity=".95"/>
+  <text x="600" y="500" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="700" fill="#f6f0ff" letter-spacing="4">STARIA VT</text>
+  <text x="600" y="548" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" fill="#cbc3ef" letter-spacing="1.2">First Orbit Alpha</text>
+</svg>

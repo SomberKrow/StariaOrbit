@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Staria VT favicon">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="45%" r="58%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#d9d0ff"/>
+      <stop offset="72%" stop-color="#8f77ff"/>
+      <stop offset="100%" stop-color="#2a1d63"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="#0b0d1f"/>
+  <circle cx="64" cy="64" r="38" fill="url(#core)" filter="url(#glow)"/>
+  <path d="M64 20l7.9 28.1L100 56l-28.1 7.9L64 92l-7.9-28.1L28 56l28.1-7.9L64 20z" fill="#ffffff" opacity=".95"/>
+  <circle cx="64" cy="64" r="9" fill="#0b0d1f" opacity=".32"/>
+</svg>
