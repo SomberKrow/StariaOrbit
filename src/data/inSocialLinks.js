@@ -1,3 +1,5 @@
+//Social Links as of 2026/06
+
 import blueskyIcon from '../assets/icons/bluesky.svg'
 import discordIcon from '../assets/icons/discord.svg'
 import twitchIcon from '../assets/icons/twitch.svg'
