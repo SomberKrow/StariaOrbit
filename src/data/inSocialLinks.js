@@ -8,7 +8,7 @@ export const socialLinks = [
   {
     id: 'twitch',
     name: 'Twitch',
-    url: 'https://www.twitch.tv/stariavt',
+    url: 'https://www.twitch.tv/staria_vt/',
     icon: twitchIcon,
     description: 'Watch and interact with me here!',
     signal: 'Live streams',
@@ -23,7 +23,7 @@ export const socialLinks = [
   {
     id: 'discord',
     name: 'Discord',
-    url: 'https://discord.gg/stariavt',
+    url: 'https://discord.gg/dpFefjcDtN',
     icon: discordIcon,
     description: 'Come join in on the community!',
     signal: 'Community',
@@ -38,7 +38,7 @@ export const socialLinks = [
   {
     id: 'youtube',
     name: 'YouTube',
-    url: 'https://www.youtube.com/@StariaVT',
+    url: 'https://www.youtube.com/@staria_vt',
     icon: youtubeIcon,
     description: 'Watch my best moments.',
     signal: 'Best moments',
