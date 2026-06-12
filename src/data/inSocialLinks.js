@@ -1,10 +1,20 @@
-//Social Links as of 2026/06
-
 import blueskyIcon from '../assets/icons/bluesky.svg'
 import discordIcon from '../assets/icons/discord.svg'
 import twitchIcon from '../assets/icons/twitch.svg'
 import xIcon from '../assets/icons/x.svg'
 import youtubeIcon from '../assets/icons/youtube.svg'
+
+export const siteCopy = {
+  eyebrow: 'Transmitting from orbit...',
+  name: 'Staria_VT',
+  tagline: "Let's share a galaxy together.",
+  status: 'Signal active',
+  headerSubtitle: 'Dreaming among stars',
+  headerCta: 'Come find me!',
+  mobileNote: 'Follow the stars to my socials',
+  coreLabel: "The skulk's home",
+  footer: 'See you in orbit!',
+}
 
 export const socialLinks = [
   {
@@ -14,12 +24,13 @@ export const socialLinks = [
     icon: twitchIcon,
     description: 'Watch and interact with me here!',
     signal: 'Live streams',
-    planetSize: '74px',
-    orbitSize: '460px',
+    importance: 'primary',
+    planetSize: '72px',
+    orbitSize: '430px',
     orbitDuration: '68s',
     orbitDelay: '-10s',
-    startAngle: '110deg',
-    counterStartAngle: '-110deg',
+    startAngle: '122deg',
+    counterStartAngle: '-122deg',
     accent: '#a98cff',
   },
   {
@@ -29,12 +40,13 @@ export const socialLinks = [
     icon: discordIcon,
     description: 'Come join in on the community!',
     signal: 'Community',
-    planetSize: '72px',
-    orbitSize: '550px',
+    importance: 'primary',
+    planetSize: '70px',
+    orbitSize: '520px',
     orbitDuration: '78s',
     orbitDelay: '-18s',
-    startAngle: '190deg',
-    counterStartAngle: '-190deg',
+    startAngle: '206deg',
+    counterStartAngle: '-206deg',
     accent: '#8f7dff',
   },
   {
@@ -44,12 +56,13 @@ export const socialLinks = [
     icon: youtubeIcon,
     description: 'Watch my best moments.',
     signal: 'Best moments',
-    planetSize: '70px',
-    orbitSize: '640px',
+    importance: 'primary',
+    planetSize: '68px',
+    orbitSize: '610px',
     orbitDuration: '88s',
     orbitDelay: '-22s',
-    startAngle: '285deg',
-    counterStartAngle: '-285deg',
+    startAngle: '304deg',
+    counterStartAngle: '-304deg',
     accent: '#c6a6ff',
   },
   {
@@ -59,12 +72,13 @@ export const socialLinks = [
     icon: xIcon,
     description: 'Where I\'ll yap about different things and post updates.',
     signal: 'Updates',
-    planetSize: '58px',
-    orbitSize: '360px',
+    importance: 'secondary',
+    planetSize: '56px',
+    orbitSize: '340px',
     orbitDuration: '58s',
     orbitDelay: '-6s',
-    startAngle: '35deg',
-    counterStartAngle: '-35deg',
+    startAngle: '38deg',
+    counterStartAngle: '-38deg',
     accent: '#d9d1ff',
   },
   {
@@ -74,12 +88,13 @@ export const socialLinks = [
     icon: blueskyIcon,
     description: 'Another place to witness me yap and post updates!',
     signal: 'More updates',
-    planetSize: '58px',
-    orbitSize: '360px',
+    importance: 'secondary',
+    planetSize: '56px',
+    orbitSize: '340px',
     orbitDuration: '58s',
     orbitDelay: '-6s',
-    startAngle: '225deg',
-    counterStartAngle: '-225deg',
+    startAngle: '226deg',
+    counterStartAngle: '-226deg',
     accent: '#b7a7ff',
   },
 ]
