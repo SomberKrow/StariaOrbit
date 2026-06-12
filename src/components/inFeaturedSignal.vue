@@ -51,11 +51,11 @@ import { featuredSignal } from '../data/inSocialLinks'
   padding: clamp(var(--space-5), 3vw, var(--space-8));
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: calc(var(--radius-lg) + 0.6rem);
+  border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 10% 20%, rgba(141, 122, 255, 0.16), transparent 18rem),
+    radial-gradient(circle at 10% 20%, rgba(169, 140, 255, 0.16), transparent 18rem),
     linear-gradient(135deg, rgba(255, 255, 255, 0.074), rgba(255, 255, 255, 0.025)),
-    rgba(8, 10, 25, 0.72);
+    rgba(8, 7, 20, 0.74);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(22px);
 }
@@ -65,6 +65,14 @@ import { featuredSignal } from '../data/inSocialLinks'
   inset: 0;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.09), transparent 28%, rgba(255, 255, 255, 0.04));
   opacity: 0.42;
+  content: '';
+}
+
+.signal-card::after {
+  position: absolute;
+  inset: auto 1.75rem 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(216, 204, 255, 0.24), transparent);
   content: '';
 }
 
@@ -82,7 +90,7 @@ import { featuredSignal } from '../data/inSocialLinks'
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(216, 204, 255, 0.14), rgba(141, 122, 255, 0.06));
+  background: radial-gradient(circle, rgba(216, 204, 255, 0.14), rgba(169, 140, 255, 0.06));
 }
 
 .signal-orbit::before,
@@ -174,11 +182,23 @@ import { featuredSignal } from '../data/inSocialLinks'
 
 @media (max-width: 820px) {
   .signal-card {
+    justify-items: start;
     grid-template-columns: 1fr;
   }
 
   .signal-action {
     width: fit-content;
+  }
+}
+
+@media (max-width: 560px) {
+  .featured-signal {
+    padding-bottom: var(--space-12);
+  }
+
+  .signal-card {
+    justify-items: center;
+    text-align: center;
   }
 }
 </style>
