@@ -57,14 +57,14 @@ defineProps({
   gap: var(--space-5);
   grid-template-columns: auto minmax(0, 1fr) auto;
   width: min(780px, 100%);
-  min-height: 9.15rem;
+  min-height: 8.9rem;
   padding: var(--space-5);
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 16% 20%, color-mix(in srgb, var(--panel-accent) 22%, transparent), transparent 14rem),
-    linear-gradient(150deg, rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.025)),
+    radial-gradient(circle at 16% 20%, color-mix(in srgb, var(--panel-accent) 24%, transparent), transparent 14rem),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.088), rgba(255, 255, 255, 0.028)),
     var(--color-panel);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(24px);
@@ -75,8 +75,16 @@ defineProps({
   inset: 0;
   border-radius: inherit;
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.14), transparent 32%, rgba(255, 255, 255, 0.05));
-  opacity: 0.46;
+  opacity: 0.44;
   pointer-events: none;
+  content: '';
+}
+
+.platform-panel::after {
+  position: absolute;
+  inset: auto 1.5rem 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--panel-accent) 42%, transparent), transparent);
   content: '';
 }
 
