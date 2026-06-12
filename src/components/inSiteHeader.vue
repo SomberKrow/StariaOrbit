@@ -1,3 +1,7 @@
+<script setup>
+import { siteCopy } from '../data/inSocialLinks'
+</script>
+
 <template>
   <header class="site-header" aria-label="Staria_VT site header">
     <a
@@ -11,17 +15,17 @@
 
       <span class="brand-copy">
         <strong>
-          Staria_VT
+          {{ siteCopy.name }}
         </strong>
 
         <small>
-          Dreaming among stars
+          {{ siteCopy.headerSubtitle }}
         </small>
       </span>
     </a>
 
     <a class="header-link" href="#social-galaxy">
-      Come find me!
+      {{ siteCopy.headerCta }}
     </a>
   </header>
 </template>
@@ -41,7 +45,7 @@
   border-radius: var(--radius-pill);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent),
-    rgba(6, 8, 19, 0.46);
+    rgba(6, 6, 19, 0.48);
   box-shadow: 0 12px 52px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(18px);
   transform: translateX(-50%);
