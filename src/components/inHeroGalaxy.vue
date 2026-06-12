@@ -1,14 +1,14 @@
 <script setup>
 import { computed, ref } from 'vue'
 import stariaCore from '../assets/images/staria-core.svg'
-import { socialLinks } from '../data/inSocialLinks'
+import { siteCopy, socialLinks } from '../data/inSocialLinks'
 import InOrbitRing from './inOrbitRing.vue'
 import InPlatformPanel from './inPlatformPanel.vue'
 import InSocialPlanet from './inSocialPlanet.vue'
 
 const activePlatform = ref(socialLinks[0])
 
-const orbitRings = ['360px', '460px', '550px', '640px']
+const orbitRings = ['340px', '430px', '520px', '610px']
 
 const activePlatformId = computed(() => activePlatform.value?.id)
 
@@ -22,19 +22,19 @@ function setActivePlatform(platform) {
     <div class="hero-shell">
       <div class="hero-copy">
         <p class="hero-eyebrow">
-          Transmitting from orbit...
+          {{ siteCopy.eyebrow }}
         </p>
 
         <h1 id="hero-title">
-          Staria_VT
+          {{ siteCopy.name }}
         </h1>
 
         <p class="hero-lead">
-          Let's share a galaxy together.
+          {{ siteCopy.tagline }}
         </p>
 
         <div class="hero-meta" aria-label="Staria_VT signal status">
-          <span>Signal active</span>
+          <span>{{ siteCopy.status }}</span>
         </div>
       </div>
 
@@ -50,10 +50,10 @@ function setActivePlatform(platform) {
             :index="index"
           />
 
-          <div class="staria-core" aria-label="The skulk's home">
+          <div class="staria-core" :aria-label="siteCopy.coreLabel">
             <img
               :src="stariaCore"
-              alt="The skulk's home"
+              :alt="siteCopy.coreLabel"
             >
 
             <span class="core-aura" aria-hidden="true" />
@@ -74,7 +74,7 @@ function setActivePlatform(platform) {
         </div>
 
         <p class="mobile-core-note">
-          Follow the stars to my socials
+          {{ siteCopy.mobileNote }}
         </p>
       </div>
 
@@ -83,6 +83,7 @@ function setActivePlatform(platform) {
           v-for="planet in socialLinks"
           :key="planet.id"
           class="constellation-card"
+          :class="`is-${planet.importance}`"
           :href="planet.url"
           target="_blank"
           rel="noreferrer noopener"
@@ -98,12 +99,16 @@ function setActivePlatform(platform) {
           </span>
 
           <span class="card-copy">
+            <span class="card-label">
+              {{ planet.signal }}
+            </span>
+
             <strong>
               {{ planet.name }}
             </strong>
 
             <small>
-              {{ planet.signal }}
+              {{ planet.description }}
             </small>
           </span>
 
@@ -120,12 +125,12 @@ function setActivePlatform(platform) {
 .hero-galaxy {
   position: relative;
   min-height: 100vh;
-  padding: clamp(6.25rem, 8vw, 7.75rem) 0 var(--space-16);
+  padding: clamp(6rem, 7.5vw, 7.25rem) 0 var(--space-16);
 }
 
 .hero-shell {
   display: grid;
-  width: min(1160px, calc(100vw - 40px));
+  width: var(--container);
   gap: clamp(var(--space-8), 4vw, var(--space-12));
   margin: 0 auto;
 }
@@ -197,13 +202,13 @@ h1 {
   position: relative;
   display: grid;
   justify-items: center;
-  min-height: min(860px, 84vw);
+  min-height: min(820px, 82vw);
   overflow: visible;
 }
 
 .galaxy-halo {
   position: absolute;
-  top: clamp(16rem, 34vw, 23rem);
+  top: clamp(15.5rem, 32vw, 22rem);
   aspect-ratio: 1;
   border-radius: 50%;
   pointer-events: none;
@@ -211,7 +216,7 @@ h1 {
 }
 
 .galaxy-halo-primary {
-  width: min(680px, 68vw);
+  width: min(650px, 66vw);
   background:
     radial-gradient(circle, rgba(255, 255, 255, 0.08) 0 8%, transparent 18%),
     radial-gradient(circle, rgba(169, 140, 255, 0.24), transparent 70%);
@@ -221,7 +226,7 @@ h1 {
 }
 
 .galaxy-halo-secondary {
-  width: min(470px, 52vw);
+  width: min(450px, 50vw);
   background: radial-gradient(circle, rgba(198, 166, 255, 0.14), transparent 72%);
   filter: blur(36px);
   opacity: 0.7;
@@ -230,7 +235,7 @@ h1 {
 
 .galaxy-system {
   position: relative;
-  width: min(720px, 68vw);
+  width: min(690px, 66vw);
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: visible;
@@ -242,7 +247,7 @@ h1 {
   display: grid;
   width: min(780px, 100%);
   justify-items: center;
-  margin-top: clamp(1rem, 2vw, 1.5rem);
+  margin-top: clamp(1.5rem, 2.2vw, 2rem);
 }
 
 .staria-core {
@@ -251,7 +256,7 @@ h1 {
   top: 50%;
   left: 50%;
   display: grid;
-  width: clamp(8rem, 13vw, 10.25rem);
+  width: clamp(8rem, 12vw, 9.9rem);
   aspect-ratio: 1;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -315,27 +320,25 @@ h1 {
 
 @keyframes core-breathe {
   from {
-    scale: 0.96;
     opacity: 0.72;
+    transform: translateY(-50%) scale(0.96);
   }
 
   to {
-    scale: 1.03;
     opacity: 1;
+    transform: translateY(-50%) scale(1.03);
   }
 }
 
 @keyframes slow-drift {
   from {
-    scale: 0.98;
     opacity: 0.52;
-    translate: 8% -4%;
+    transform: translate(8%, -54%) scale(0.98);
   }
 
   to {
-    scale: 1.04;
     opacity: 0.72;
-    translate: 3% 2%;
+    transform: translate(3%, -48%) scale(1.04);
   }
 }
 
@@ -366,13 +369,13 @@ h1 {
   }
 
   .galaxy-panel-wrap {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
   }
 }
 
 @media (max-width: 760px) {
   .hero-galaxy {
-    padding-top: 6.5rem;
+    padding-top: 6.25rem;
   }
 
   .hero-shell {
@@ -457,6 +460,10 @@ h1 {
     transform var(--duration-mid) var(--ease-soft);
 }
 
+.constellation-card.is-primary {
+  border-color: rgba(216, 204, 255, 0.18);
+}
+
 .constellation-card:hover,
 .constellation-card:focus-visible {
   border-color: color-mix(in srgb, var(--card-accent) 46%, rgba(255, 255, 255, 0.2));
@@ -470,8 +477,9 @@ h1 {
 
 .card-icon {
   display: grid;
-  width: 3rem;
-  height: 3rem;
+  width: 3.1rem;
+  height: 3.1rem;
+  flex: 0 0 auto;
   place-items: center;
   border-radius: 50%;
   background:
@@ -488,19 +496,27 @@ h1 {
 
 .card-copy {
   display: grid;
-  gap: 0.18rem;
+  gap: 0.16rem;
+  min-width: 0;
+}
+
+.card-label {
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  font-weight: 740;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .card-copy strong {
   color: var(--color-starlight);
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .card-copy small {
-  color: var(--color-muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--color-mist);
+  font-size: 0.84rem;
+  line-height: 1.45;
 }
 
 .card-arrow {
