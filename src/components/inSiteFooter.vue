@@ -1,7 +1,11 @@
+<script setup>
+import { siteCopy } from '../data/inSocialLinks'
+</script>
+
 <template>
   <footer class="site-footer">
     <p>
-      See you in orbit!
+      {{ siteCopy.footer }}
     </p>
   </footer>
 </template>
