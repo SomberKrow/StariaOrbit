@@ -3,23 +3,24 @@
   --font-display: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --color-void: #050711;
-  --color-night: #0b0d1f;
-  --color-deep: #121638;
-  --color-nebula: #372760;
-  --color-violet: #8d7aff;
-  --color-lavender: #d9d1ff;
-  --color-starlight: #f8f4ff;
-  --color-mist: #bfb8df;
-  --color-muted: #837fa2;
-  --color-panel: rgba(11, 13, 31, 0.68);
-  --color-panel-strong: rgba(12, 14, 34, 0.86);
+  --color-void: #04040c;
+  --color-night: #090819;
+  --color-deep: #121238;
+  --color-nebula: #31235d;
+  --color-violet: #a98cff;
+  --color-violet-soft: #c6a6ff;
+  --color-lavender: #ded5ff;
+  --color-starlight: #fbf8ff;
+  --color-mist: #c8c0e6;
+  --color-muted: #8f89ad;
+  --color-panel: rgba(10, 9, 26, 0.72);
+  --color-panel-strong: rgba(12, 10, 32, 0.9);
   --color-border: rgba(224, 217, 255, 0.16);
-  --color-border-strong: rgba(236, 230, 255, 0.28);
+  --color-border-strong: rgba(236, 230, 255, 0.3);
 
   --shadow-soft: 0 22px 80px rgba(0, 0, 0, 0.38);
-  --shadow-glow: 0 0 34px rgba(141, 122, 255, 0.34);
-  --shadow-focus: 0 0 0 4px rgba(216, 204, 255, 0.16);
+  --shadow-glow: 0 0 38px rgba(169, 140, 255, 0.34);
+  --shadow-focus: 0 0 0 4px rgba(216, 204, 255, 0.18);
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -36,6 +37,7 @@
   --radius-sm: 0.75rem;
   --radius-md: 1.1rem;
   --radius-lg: 1.6rem;
+  --radius-xl: 2.2rem;
   --radius-pill: 999px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
