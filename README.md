@@ -1,8 +1,8 @@
-# Staria VT — First Orbit Alpha
+# StariaOrbit
 
-A clean `v1.0.0-alpha.0` Vue 3 prototype for Staria VT's cosmic creator hub.
+A focused Vue 3 creator hub for **Staria_VT** built around a soft purple Social Galaxy.
 
-This build is intentionally focused: one polished page, one strong Social Galaxy, one clean foundation for redesign and iteration.
+The site is intentionally small and polished: a central identity core, orbiting social planets on desktop, a clean constellation-style link queue on mobile, and a minimal signal card for atmosphere.
 
 ## Stack
 
@@ -26,7 +26,7 @@ npm run dev
 
 ```bash
 npm run dev      # local development server
-npm run build    # production build when ready
+npm run build    # production build
 npm run preview  # preview production build
 npm run lint     # eslint pass
 ```
@@ -40,21 +40,45 @@ src/
     images/       # Staria core / visual identity assets
     styles/       # global tokens and base styles
   components/     # focused Vue components
-  data/           # editable social link data
+  data/           # editable site copy and social link data
 ```
 
-## Important Alpha Notes
+## Editing Staria's Links
 
-- Social links live in `src/data/inSocialLinks.js`.
-- Replace the placeholder URLs with Staria's verified links before production.
-- Replace `src/assets/images/staria-core.svg` with her final logo/favicon when available.
-- The platform icons are clean in-project alpha SVGs. For public launch, verify brand compliance or replace with official brand assets.
-- Desktop uses the orbiting Social Galaxy.
-- Mobile switches to constellation cards instead of forcing a broken orbit.
+The main editable content lives in:
+
+```txt
+src/data/inSocialLinks.js
+```
+
+That file controls:
+
+- Site text
+- Social URLs
+- Platform descriptions
+- Planet size
+- Orbit spacing
+- Accent colors
+- Featured signal copy
+
+## Design Direction
+
+The current direction is:
+
+- Soft purple and darker space
+- Slightly mysterious
+- Calm orbital motion
+- Desktop-first Social Galaxy
+- Mobile-friendly link queue
+- Minimal Staria-authored copy
+
+## Asset Notes
+
+- `src/assets/images/staria-core.svg` is temporary until Staria has a final logo/core mark.
+- Platform icons are clean in-project SVGs. Before public launch, verify brand compliance or replace with official brand assets.
+- Desktop uses the orbiting Social Galaxy. Mobile intentionally switches to cards instead of forcing a cramped orbit.
 - Reduced motion preferences are respected through CSS.
 
-## Version Target
+## Current Goal
 
-`v1.0.0-alpha.0 — First Orbit Alpha`
-
-Goal: establish the real foundation for the Staria VT site before expanding scope.
+Make the first impression feel like opening a quiet little galaxy built around Staria.
