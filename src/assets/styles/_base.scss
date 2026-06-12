@@ -6,6 +6,7 @@ html {
   min-width: 320px;
   background: var(--color-void);
   scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
   text-rendering: optimizeLegibility;
 }
 
@@ -15,15 +16,15 @@ body {
   margin: 0;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 50% 20%, rgba(89, 66, 169, 0.34), transparent 34rem),
-    linear-gradient(160deg, var(--color-night) 0%, var(--color-void) 70%);
+    radial-gradient(circle at 50% 18%, rgba(104, 83, 205, 0.28), transparent 34rem),
+    linear-gradient(160deg, var(--color-night) 0%, var(--color-void) 72%);
   color: var(--color-starlight);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body::selection {
+::selection {
   background: rgba(216, 204, 255, 0.32);
   color: var(--color-starlight);
 }
@@ -46,6 +47,11 @@ svg {
 
 button {
   border: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 #app {
