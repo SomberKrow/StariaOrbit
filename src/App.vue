@@ -10,10 +10,12 @@ import InStarBackdrop from './components/inStarBackdrop.vue'
   <div class="staria-shell">
     <InStarBackdrop />
     <InSiteHeader />
-    <main>
+
+    <main id="main-content">
       <InHeroGalaxy />
       <InFeaturedSignal />
     </main>
+
     <InSiteFooter />
   </div>
 </template>
@@ -23,7 +25,7 @@ import InStarBackdrop from './components/inStarBackdrop.vue'
   position: relative;
   isolation: isolate;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 main {
