@@ -38,16 +38,15 @@ function activatePlanet() {
     <div class="planet-shell">
       <a
         class="planet-button"
-        :class="{ 'is-active': active }"
+        :class="[`is-${planet.importance}`, { 'is-active': active }]"
         :href="planet.url"
         target="_blank"
         rel="noreferrer noopener"
-        :aria-label="`Open Staria VT on ${planet.name}`"
+        :aria-label="`Open Staria_VT on ${planet.name}`"
         @focus="activatePlanet"
         @pointerenter="activatePlanet"
       >
         <span class="planet-atmosphere" aria-hidden="true" />
-
         <span class="planet-surface" aria-hidden="true" />
 
         <img
@@ -124,9 +123,16 @@ function activatePlanet() {
   will-change: transform;
 }
 
+.planet-button.is-primary {
+  box-shadow:
+    0 0 28px color-mix(in srgb, var(--planet-accent) 42%, transparent),
+    inset -12px -15px 22px rgba(0, 0, 0, 0.34),
+    inset 10px 10px 18px rgba(255, 255, 255, 0.16);
+}
+
 .planet-button::before {
   position: absolute;
-  inset: -0.5rem;
+  inset: -0.48rem;
   border: 1px solid color-mix(in srgb, var(--planet-accent) 38%, transparent);
   border-radius: 50%;
   opacity: 0;
