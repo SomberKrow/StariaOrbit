@@ -34,7 +34,9 @@ function setActivePlatform(platform) {
         </p>
 
         <div class="hero-meta" aria-label="Staria_VT signal status">
-          <span>{{ siteCopy.status }}</span>
+          <span>
+            {{ siteCopy.status }}
+          </span>
         </div>
       </div>
 
